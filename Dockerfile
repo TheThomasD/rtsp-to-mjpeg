@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add vlc
+RUN apk add --no-cache vlc iputils
 RUN adduser --disabled-password streamer
 WORKDIR /home/streamer
 COPY rtsp-to-mjpeg.sh .
